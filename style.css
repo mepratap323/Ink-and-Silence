@@ -1,0 +1,322 @@
+/* Modern Professional style.css for INK and Silence - Dark + White theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #e5e7eb;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100vh;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #3b82f6;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.active {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6 !important;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+  transition: all 0.3s ease;
+  margin: 0 1rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+}
+
+.footer {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  margin-top: 4rem;
+  color: #94a3b8;
+}
+
+.chapter::before {
+  content: '📚';
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 8rem 3rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(245, 158, 11, 0.15) 50%, rgba(16, 185, 129, 0.1) 100%), 
+              radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+  color: white;
+  margin-bottom: 5rem;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 35px 80px -20px rgba(59, 130, 246, 0.3);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('images/students-bg.jpg') center/cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  max-width: 600px;
+  opacity: 0.95;
+}
+
+.grades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.grade-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.grade-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+}
+
+.grade-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px -16px rgba(59, 130, 246, 0.3);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.grade-card h2 {
+  color: #f8fafc;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.grade-card a {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.grade-card a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5);
+}
+
+h1 {
+  color: #f8fafc;
+  font-size: clamp(2.8rem, 5vw, 3.5rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4rem;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #f59e0b);
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #60a5fa;
+  margin: 2rem 0 1rem 0;
+}
+
+.chapters {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chapter {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border-left: 4px solid #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.chapter:hover {
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
+  transform: translateX(4px);
+}
+
+.chapter h3 {
+  color: #3b82f6;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.chapter dl {
+  margin: 1rem 0;
+}
+
+.chapter dt {
+  font-weight: 600;
+  color: #f8fafc;
+  margin-top: 1rem;
+}
+
+.chapter dd {
+  margin: 0.25rem 0 0 1.5rem;
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+.chapter ol {
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .chapter {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 0.3rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .grades {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+  }
+}
